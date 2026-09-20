@@ -1,0 +1,26 @@
+
+.auth-card {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+
+    background-color: rgba(15, 24, 14, 0.938);
+    border-radius: 12px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 0px;
+}
+
+button {
+    margin-top: 12px;
+}

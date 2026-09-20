@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet",  href="css/base.css">
-    <link rel="stylesheet",  href="css/auth.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/auth.css">
     <title>Вход</title>
 </head>
 
 <body>
-    <main>
-        <section>
+    <main class="auth-page">
+        <section class="auth-card">
             <h1>Регистрация</h1>
 
-            <form> <!--заготовка для будущих методов-->
-                <div>
+            <form class="auth-form"> <!--заготовка для будущих методов-->
+                <div class="form-field">
                     Логин
                     <input
                         id="login"
@@ -23,7 +23,7 @@
                         required
                     >
                 </div>
-                <div>
+                <div class="form-field">
                     Почта
                     <input
                         id="email"
@@ -32,7 +32,7 @@
                         required
                     >
                 </div>
-                <div>
+                <div class="form-field">
                     Пароль
                     <input
                         id="password"
@@ -41,7 +41,7 @@
                         required
                     >
                 </div>
-                <div>
+                <div class="form-field">
                     Повторите пароль
                     <input
                         id="password-repeat"
