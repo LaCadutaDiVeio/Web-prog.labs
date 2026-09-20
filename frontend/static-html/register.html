@@ -16,47 +16,55 @@
             <form class="auth-form"> <!--заготовка для будущих методов-->
                 <div class="form-field">
                     Логин
-                    <input
+                    <input class="form-field_input"
                         id="login"
                         name="login"
                         type="login"
+                        placeholder="user1234"
                         required
                     >
                 </div>
                 <div class="form-field">
                     Почта
-                    <input
+                    <input class="form-field_input"
                         id="email"
                         name="email"
                         type="email"
+                        placeholder="youre@really.cool"
                         required
                     >
                 </div>
                 <div class="form-field">
                     Пароль
-                    <input
+                    <input class="form-field_input"
                         id="password"
                         name="password"
                         type="password"
+                        minlength="8"
+                        placeholder="Не менее 8 символов"
                         required
                     >
                 </div>
                 <div class="form-field">
                     Повторите пароль
-                    <input
+                    <input class="form-field_input"
                         id="password-repeat"
                         name="password-repeat"
                         type="password"
+                        minlength="8"
+                        placeholder="не используй Ctrl+C :)"
                         required
                     >
                 </div>
 
-                <button type="submit">Зарегистрироваться</button>
+                <button class="auth-button"
+                    type="submit">Зарегистрироваться
+                </button>
             </form>
             
             <p>
                 Уже есть аккаунт?
-                <a hreff="login.html">Войдите!</a>
+                <a href="login.html">Войдите!</a>
             </p>
         </section>
     </main>
