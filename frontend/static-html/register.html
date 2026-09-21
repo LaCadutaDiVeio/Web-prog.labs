@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/auth.css">
-    <title>Вход</title>
+    <title>Регистрация</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                     <input class="form-field_input"
                         id="login"
                         name="login"
-                        type="login"
+                        type="text"
                         placeholder="user1234"
                         required
                     >
@@ -52,7 +52,7 @@
                         name="password-repeat"
                         type="password"
                         minlength="8"
-                        placeholder="не используй Ctrl+C :)"
+                        placeholder="Не используйте копирование :)"
                         required
                     >
                 </div>
@@ -62,9 +62,12 @@
                 </button>
             </form>
             
-            <p>
+            <p class="auth-option-switch">
                 Уже есть аккаунт?
-                <a href="login.html">Войдите!</a>
+                <a class="auth-option-switch_link"
+                    href="login.html">
+                    Войдите!
+                </a>
             </p>
         </section>
     </main>
