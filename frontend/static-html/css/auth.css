@@ -1,16 +1,39 @@
 
-.auth-card {
-    max-width: 400px;
-    margin: 100px auto;
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 32px;
 
     background-color: rgba(15, 24, 14, 0.938);
     border-radius: 12px;
     box-shadow: 0 0px 124px rgba(0, 0, 0, 0.8);
 }
-.auth-card h1, 
-.auth-card h2 {
+.auth-card h1 {
+    margin-bottom: 4px;
     text-align: center;
+}
+.auth-card h2 {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(213, 218, 224, 0.7);
+}
+@media (max-width: 600px) {
+    .auth-card {
+        padding: 20px;
+    }
 }
 
 .auth-form {
@@ -29,6 +52,8 @@
 
 .form-field_input {
     padding: 10px 14px;
+    width: 100%;
+    max-width: 400px;
     
     color: #d5dae0;
     background-color: rgba(15, 24, 14, 0.938);
@@ -51,7 +76,8 @@
 
 .auth-button {
     padding: 8px 8px;
-    width: 85%;
+    margin-top: 16px;
+    width: 60%;
 
     font-size: 15px;
     font-weight: 600;
