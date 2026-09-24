@@ -1,0 +1,112 @@
+
+body {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 64px 1fr;
+
+    min-height: 100vh;
+
+    background: #17201a;
+}
+
+.app-header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 24px;
+
+    background-color: rgba(15, 24, 14, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-search {
+    display: flex;
+    gap: 8px;
+
+    flex: 1;
+    width: 100%;
+}
+.app-search input {
+    width: 100%;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding:20px;
+
+    background-color: rgba(15, 24, 14, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-navigator ul {
+    list-style: none;
+}
+
+.project-header {
+    margin-bottom: 20px;
+}
+
+.project-header h1 {
+    font-size: 28px;
+}
+
+.project-header p {
+    margin-top: 4px;
+    color: rgba(226, 232, 240, 0.65);
+}
+
+.project-tabs {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 32px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.project-tabs a {
+    padding: 8px 12px;
+
+    color: rgba(226, 232, 240, 0.7);
+    text-decoration: none;
+}
+.project-tabs_active {
+    color: #e2e8f0;
+    border-bottom: 2px solid rgba(87, 199, 133, 1);
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.tasks-header button {
+    padding: 8px 12px;
+
+    color: #102116;
+    font-weight: 600;
+
+    background-color: rgba(87, 199, 133, 0.95);
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+.tasks-header button:hover {
+    background-color: rgba(104, 216, 150, 1);
+}
+
+.project-page {
+    grid-column: 2;
+    grid-row: 2;
+
+    padding: 32px;
+}
