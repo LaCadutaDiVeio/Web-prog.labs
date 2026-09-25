@@ -9,6 +9,43 @@ body {
     background: #17201a;
 }
 
+.tasks-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 16px;
+}
+.tasks-toolbar label {
+    font-size: 14px;
+    color: rgba(226, 232, 240, 0.65);
+}
+.tasks-toolbar select {
+    padding: 6px 10px;
+
+    color: #e2e8f0;
+    background-color: #1e2a22;   /* ← непрозрачный фон вместо rgba */
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.tasks-toolbar select:hover {
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.tasks-toolbar select:focus {
+    outline: none;
+    border-color: rgba(87, 199, 133, 0.9);
+    box-shadow: 0 0 0 2px rgba(87, 199, 133, 0.2);
+}
+.tasks-toolbar select option {
+    color: #e2e8f0;
+    background-color: #1e2a22;
+}
+
 .task-link {
     color: rgba(87, 199, 133, 1);
     font-weight: 600;
