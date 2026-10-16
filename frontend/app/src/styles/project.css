@@ -1,3 +1,4 @@
+
 .app-layout {
     display: grid;
 
@@ -6,7 +7,7 @@
 
     min-height: 100vh;
 
-    background: #17201a;
+    background: var(--color-bg);
 }
 
 .app-header {
@@ -15,19 +16,19 @@
 
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: var(--space-lg);
 
-    padding: 0 24px;
+    padding: 0 var(--space-lg);
 
-    background-color: rgba(15, 24, 14, 0.96);
+    background-color: var(--color-surface-header);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .app-search {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--space-sm);
 
     flex: 1;
 
@@ -37,17 +38,17 @@
 .app-search input {
     width: 100%;
 
-    padding: 2px 4px;
+    padding: 2px var(--space-xs);
 
-    color: #e2e8f0;
-    background-color: #102116;
+    color: var(--color-text);
+    background-color: var(--color-surface-input);
 
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
 }
 
 .app-name {
-    color: #e2e8f0;
+    color: var(--color-text);
 
     font-weight: 600;
     text-decoration: none;
@@ -58,12 +59,12 @@
 .profile-button {
     padding: 6px 10px;
 
-    color: #e2e8f0;
+    color: var(--color-text);
 
     background-color: rgba(255, 255, 255, 0.06);
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 6px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
 
     cursor: pointer;
 }
@@ -72,17 +73,17 @@
     grid-column: 1;
     grid-row: 2;
 
-    padding: 8px;
+    padding: var(--space-sm);
 
-    background-color: rgba(15, 24, 14, 0.9);
+    background-color: var(--color-surface-sidebar);
 
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid var(--color-border);
 }
 
 .sidebar-navigator ul {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: var(--space-xs);
 
     padding: 0;
     margin: 0;
@@ -97,21 +98,21 @@
 
     padding: 10px 12px;
 
-    color: rgba(226, 232, 240, 0.75);
+    color: var(--status-planned-fg);
 
     text-decoration: none;
-    font-size: 14px;
+    font-size: var(--fs-sm);
     font-weight: 500;
 
-    border-radius: 8px;
+    border-radius: var(--radius-md);
 
     transition:
-        background-color 0.15s ease,
-        color 0.15s ease;
+        background-color var(--transition-base),
+        color var(--transition-base);
 }
 
 .sidebar-navigator a:hover {
-    color: #e2e8f0;
+    color: var(--color-text);
 
     background-color: rgba(255, 255, 255, 0.06);
 }
@@ -119,18 +120,18 @@
 .sidebar-navigator a.is-active {
     padding-left: 9px;
 
-    color: #e2e8f0;
+    color: var(--color-text);
 
-    background-color: rgba(87, 199, 133, 0.12);
+    background-color: var(--color-accent-soft);
 
-    border-left: 3px solid rgba(87, 199, 133, 1);
+    border-left: 3px solid var(--color-accent-strong);
 }
 
 .project-page {
     grid-column: 2;
     grid-row: 2;
 
-    padding: 32px;
+    padding: var(--space-xl);
 }
 
 .project-header {
@@ -138,36 +139,36 @@
 }
 
 .project-header h1 {
-    font-size: 28px;
+    font-size: var(--fs-xl);
 }
 
 .project-header p {
-    margin-top: 4px;
+    margin-top: var(--space-xs);
 
-    color: rgba(226, 232, 240, 0.65);
+    color: var(--color-text-muted);
 }
 
 .project-tabs {
     display: flex;
-    gap: 8px;
+    gap: var(--space-sm);
 
-    margin-bottom: 32px;
+    margin-bottom: var(--space-xl);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .project-tabs a {
-    padding: 8px 12px;
+    padding: var(--space-sm) 12px;
 
-    color: rgba(226, 232, 240, 0.7);
+    color: var(--color-text-muted);
 
     text-decoration: none;
 }
 
 .project-tabs a.project-tabs_active {
-    color: #e2e8f0;
+    color: var(--color-text);
 
-    border-bottom: 2px solid rgba(87, 199, 133, 1);
+    border-bottom: 2px solid var(--color-accent-strong);
 }
 
 .tasks-header {
@@ -175,71 +176,71 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 16px;
+    margin-bottom: var(--space-md);
 }
 
 .tasks-header button {
-    padding: 8px 12px;
+    padding: var(--space-sm) 12px;
 
-    color: #102116;
+    color: var(--color-on-accent);
 
     font-weight: 600;
 
-    background-color: rgba(87, 199, 133, 0.95);
+    background-color: var(--color-accent-strong);
 
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
 
     cursor: pointer;
 }
 
 .tasks-header button:hover {
-    background-color: rgba(104, 216, 150, 1);
+    background-color: var(--color-accent-strong-hover);
 }
 
 .tasks-toolbar {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--space-sm);
 
-    margin-bottom: 16px;
+    margin-bottom: var(--space-md);
 }
 
 .tasks-toolbar label {
-    font-size: 14px;
+    font-size: var(--fs-sm);
 
-    color: rgba(226, 232, 240, 0.65);
+    color: var(--color-text-muted);
 }
 
 .tasks-toolbar select {
     padding: 6px 10px;
 
-    color: #e2e8f0;
+    color: var(--color-text);
 
-    background-color: #1e2a22;
+    background-color: var(--dark-600);
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 6px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
 
     cursor: pointer;
 }
 
 .tasks-toolbar select:hover {
-    border-color: rgba(255, 255, 255, 0.24);
+    border-color: var(--color-border-hover);
 }
 
 .tasks-toolbar select:focus {
     outline: none;
 
-    border-color: rgba(87, 199, 133, 0.9);
+    border-color: var(--color-accent-strong);
 
-    box-shadow: 0 0 0 2px rgba(87, 199, 133, 0.2);
+    box-shadow: var(--shadow-focus);
 }
 
 .tasks-toolbar select option {
-    color: #e2e8f0;
+    color: var(--color-text);
 
-    background-color: #1e2a22;
+    background-color: var(--dark-600);
 }
 
 .tasks-table-wrapper {
@@ -257,20 +258,20 @@
 
 .tasks-table th,
 .tasks-table td {
-    padding: 12px 16px;
+    padding: 12px var(--space-md);
 
     text-align: left;
 }
 
 .tasks-table th {
-    font-size: 14px;
+    font-size: var(--fs-sm);
     font-weight: 600;
 
-    color: rgba(226, 232, 240, 0.65);
+    color: var(--color-text-muted);
 }
 
 .tasks-table tbody tr {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--color-border);
 }
 
 .tasks-table tbody tr:hover {
@@ -278,7 +279,7 @@
 }
 
 .task-link {
-    color: rgba(87, 199, 133, 1);
+    color: var(--color-accent-strong);
 
     font-weight: 600;
     text-decoration: none;
@@ -291,32 +292,32 @@
 .status-badge {
     display: inline-block;
 
-    padding: 0 8px;
+    padding: 0 var(--space-sm);
 
     font-size: 15px;
     font-weight: 600;
 
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 
     white-space: nowrap;
 }
 
 .status-badge_work {
-    color: rgba(136, 226, 173, 1);
+    color: var(--status-work-fg);
 
-    background-color: rgba(87, 199, 133, 0.14);
+    background-color: var(--status-work-bg);
 }
 
 .status-badge_planned {
-    color: rgba(226, 232, 240, 0.75);
+    color: var(--status-planned-fg);
 
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: var(--status-planned-bg);
 }
 
 .status-badge_done {
-    color: rgba(237, 221, 83, 1);
+    color: var(--status-done-fg);
 
-    background-color: rgba(237, 221, 83, 0.12);
+    background-color: var(--status-done-bg);
 }
 
 @media (max-width: 700px) {
@@ -333,7 +334,7 @@
         flex-wrap: wrap;
         gap: 12px;
 
-        padding: 12px 16px;
+        padding: 12px var(--space-md);
     }
 
     .app-search {
@@ -353,12 +354,12 @@
         padding: 12px 20px;
 
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid var(--color-border);
     }
 
     .sidebar-navigator ul {
         flex-direction: row;
-        gap: 20px;
+        gap: var(--space-lg);
     }
 
     .project-page {

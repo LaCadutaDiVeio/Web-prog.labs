@@ -1,5 +1,5 @@
 // src/router.tsx
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter, Navigate } from 'react-router';
 
 import AuthLayout from './layouts/AuthLayout';
 import AppLayout from './layouts/AppLayout';
@@ -21,7 +21,8 @@ export const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
-      { path: '/', element: <ProjectPage /> },
+      { path: '/', element: <Navigate to ="/project" replace />},
+      { path: '/project', element: <ProjectPage /> },
       { path: '/my-tasks', element: <MyTasksPage /> },
     ],
   },
