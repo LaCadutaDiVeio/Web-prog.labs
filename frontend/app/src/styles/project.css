@@ -1,4 +1,3 @@
-
 .app-layout {
     display: grid;
 
@@ -16,6 +15,7 @@
 
     display: flex;
     align-items: center;
+
     gap: var(--space-lg);
 
     padding: 0 var(--space-lg);
@@ -28,6 +28,7 @@
 .app-search {
     display: flex;
     align-items: center;
+
     gap: var(--space-sm);
 
     flex: 1;
@@ -41,10 +42,29 @@
     padding: 2px var(--space-xs);
 
     color: var(--color-text);
+
     background-color: var(--color-surface-input);
 
-    border: none;
+    border: 1px solid transparent;
     border-radius: var(--radius-sm);
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.app-search input:hover {
+    border-color: var(--color-border-strong);
+}
+
+.app-search input:focus {
+    outline: none;
+
+    background-color: var(--color-surface-input-focus);
+
+    border-color: var(--color-accent);
+
+    box-shadow: var(--shadow-focus);
 }
 
 .app-name {
@@ -61,12 +81,22 @@
 
     color: var(--color-text);
 
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: var(--color-surface-control);
 
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-sm);
 
     cursor: pointer;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.profile-button:hover {
+    background-color: var(--color-surface-hover);
+
+    border-color: var(--color-border-hover);
 }
 
 .sidebar {
@@ -83,6 +113,7 @@
 .sidebar-navigator ul {
     display: flex;
     flex-direction: column;
+
     gap: var(--space-xs);
 
     padding: 0;
@@ -94,11 +125,12 @@
 .sidebar-navigator a {
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     padding: 10px 12px;
 
-    color: var(--status-planned-fg);
+    color: var(--color-text-muted);
 
     text-decoration: none;
     font-size: var(--fs-sm);
@@ -114,7 +146,7 @@
 .sidebar-navigator a:hover {
     color: var(--color-text);
 
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: var(--color-surface-hover);
 }
 
 .sidebar-navigator a.is-active {
@@ -124,7 +156,7 @@
 
     background-color: var(--color-accent-soft);
 
-    border-left: 3px solid var(--color-accent-strong);
+    border-left: 3px solid var(--color-accent);
 }
 
 .project-page {
@@ -150,6 +182,7 @@
 
 .project-tabs {
     display: flex;
+
     gap: var(--space-sm);
 
     margin-bottom: var(--space-xl);
@@ -163,12 +196,20 @@
     color: var(--color-text-muted);
 
     text-decoration: none;
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base);
+}
+
+.project-tabs a:hover {
+    color: var(--color-text);
 }
 
 .project-tabs a.project-tabs_active {
     color: var(--color-text);
 
-    border-bottom: 2px solid var(--color-accent-strong);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .tasks-header {
@@ -192,6 +233,8 @@
     border-radius: var(--radius-sm);
 
     cursor: pointer;
+
+    transition: background-color var(--transition-fast);
 }
 
 .tasks-header button:hover {
@@ -201,6 +244,7 @@
 .tasks-toolbar {
     display: flex;
     align-items: center;
+
     gap: var(--space-sm);
 
     margin-bottom: var(--space-md);
@@ -217,12 +261,16 @@
 
     color: var(--color-text);
 
-    background-color: var(--dark-600);
+    background-color: var(--color-surface-input);
 
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-sm);
 
     cursor: pointer;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base);
 }
 
 .tasks-toolbar select:hover {
@@ -232,7 +280,9 @@
 .tasks-toolbar select:focus {
     outline: none;
 
-    border-color: var(--color-accent-strong);
+    background-color: var(--color-surface-input-focus);
+
+    border-color: var(--color-accent);
 
     box-shadow: var(--shadow-focus);
 }
@@ -240,7 +290,7 @@
 .tasks-toolbar select option {
     color: var(--color-text);
 
-    background-color: var(--dark-600);
+    background-color: var(--gray-800);
 }
 
 .tasks-table-wrapper {
@@ -272,20 +322,24 @@
 
 .tasks-table tbody tr {
     border-top: 1px solid var(--color-border);
+
+    transition: background-color var(--transition-base);
 }
 
 .tasks-table tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.035);
+    background-color: var(--color-surface-hover-soft);
 }
 
 .task-link {
-    color: var(--color-accent-strong);
+    color: var(--color-accent);
 
     font-weight: 600;
     text-decoration: none;
 }
 
 .task-link:hover {
+    color: var(--color-accent-hover);
+
     text-decoration: underline;
 }
 
@@ -332,6 +386,7 @@
 
         display: flex;
         flex-wrap: wrap;
+
         gap: 12px;
 
         padding: 12px var(--space-md);
@@ -359,6 +414,7 @@
 
     .sidebar-navigator ul {
         flex-direction: row;
+
         gap: var(--space-lg);
     }
 

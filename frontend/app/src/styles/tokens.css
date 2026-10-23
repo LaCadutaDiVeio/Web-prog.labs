@@ -1,127 +1,99 @@
-
 :root {
-  /* ============ ПРИМИТИВЫ: ПАЛИТРА ============ */
+    --gray-50: #f7f7f7;
+    --gray-100: #ededed;
+    --gray-200: #d6d6d6;
+    --gray-300: #b8b8b8;
+    --gray-400: #969696;
+    --gray-500: #737373;
+    --gray-600: #575757;
+    --gray-700: #3d3d3d;
+    --gray-800: #292929;
+    --gray-850: #202020;
+    --gray-900: #171717;
+    --gray-950: #0d0d0d;
 
-  /* Зелёный — основной акцент проекта */
-  --green-300: #88e2ad;
-  --green-400: #57c785;
-  --green-500: #3aa96a;
-  --green-600: #2a7d4d;
+    --white: #ffffff;
+    --black: #000000;
 
-  /* Тёмные — фоны и поверхности */
-  --dark-900: #0b120d;
-  --dark-800: #0f180e;
-  --dark-700: #17201a;
-  --dark-600: #1e2a22;
-  --dark-500: #24362c;
+    --color-bg: var(--gray-900);
 
-  /* Нейтральные — текст */
-  --gray-50:  #e2e8f0;
-  --gray-100: #d5dae0;
-  --gray-300: #94a3b8;
+    --color-surface: rgba(23, 23, 23, 0.96);
+    --color-surface-header: rgba(13, 13, 13, 0.96);
+    --color-surface-sidebar: rgba(23, 23, 23, 0.96);
 
-  /* Жёлтый — акцент "выполнено" */
-  --yellow-400: #eddd53;
+    --color-surface-input: rgba(41, 41, 41, 0.9);
+    --color-surface-input-focus: rgba(61, 61, 61, 0.95);
 
-  /* Синий — для градиента */
-  --blue-700: #004f70;
+    --color-surface-control: rgba(255, 255, 255, 0.06);
+    --color-surface-hover: rgba(255, 255, 255, 0.08);
+    --color-surface-hover-soft: rgba(255, 255, 255, 0.04);
 
-  /* Чистые */
-  --white: #ffffff;
-  --black: #000000;
+    --color-text: var(--gray-100);
+    --color-text-muted: var(--gray-400);
+    --color-text-subtle: var(--gray-500);
+    --color-text-placeholder: var(--gray-500);
 
-  /* ============ СЕМАНТИКА: ПОВЕРХНОСТИ ============ */
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-strong: rgba(255, 255, 255, 0.14);
+    --color-border-hover: rgba(255, 255, 255, 0.28);
 
-  --color-bg:               var(--dark-700);
-  --color-surface:          rgba(15, 24, 14, 0.94);
-  --color-surface-header:   rgba(15, 24, 14, 0.96);
-  --color-surface-sidebar:  rgba(15, 24, 14, 0.9);
-  --color-surface-input:    rgba(15, 24, 14, 0.94);
-  --color-surface-input-focus: rgba(19, 48, 31, 0.85);
+    --color-accent: var(--gray-200);
+    --color-accent-hover: var(--gray-50);
 
-  /* ============ СЕМАНТИКА: ТЕКСТ ============ */
+    --color-accent-soft: rgba(255, 255, 255, 0.1);
+    --color-accent-strong: var(--gray-200);
+    --color-accent-strong-hover: var(--gray-50);
 
-  --color-text:             var(--gray-50);
-  --color-text-muted:       rgba(226, 232, 240, 0.65);
-  --color-text-subtle:      rgba(226, 232, 240, 0.5);
-  --color-text-placeholder: rgba(213, 218, 224, 0.5);
+    --color-on-accent: var(--gray-950);
 
-  /* ============ СЕМАНТИКА: ГРАНИЦЫ ============ */
+    --status-planned-bg: rgba(255, 255, 255, 0.06);
+    --status-planned-fg: var(--gray-400);
 
-  --color-border:           rgba(255, 255, 255, 0.1);
-  --color-border-strong:    rgba(255, 255, 255, 0.12);
-  --color-border-hover:     rgba(255, 255, 255, 0.24);
+    --status-work-bg: rgba(255, 255, 255, 0.11);
+    --status-work-fg: var(--gray-200);
 
-  /* ============ СЕМАНТИКА: АКЦЕНТ ============ */
+    --status-done-bg: rgba(255, 255, 255, 0.17);
+    --status-done-fg: var(--gray-50);
 
-  --color-accent:           var(--green-400);
-  --color-accent-hover:     var(--green-300);
-  --color-accent-soft:      rgba(87, 199, 133, 0.12);
-  --color-accent-strong:    rgba(87, 199, 133, 0.95);
-  --color-accent-strong-hover: rgba(104, 216, 150, 1);
-  --color-on-accent:        var(--dark-800);
+    --gradient-app: linear-gradient(
+        135deg,
+        var(--gray-600) 0%,
+        var(--gray-800) 48%,
+        var(--gray-950) 100%
+    );
 
-  /* ============ СЕМАНТИКА: СТАТУСЫ ============ */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
 
-  --status-planned-bg:      rgba(255, 255, 255, 0.07);
-  --status-planned-fg:      rgba(226, 232, 240, 0.75);
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
 
-  --status-work-bg:         rgba(87, 199, 133, 0.14);
-  --status-work-fg:         var(--green-300);
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --status-done-bg:         rgba(237, 221, 83, 0.12);
-  --status-done-fg:         var(--yellow-400);
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 20px;
+    --fs-xl: 28px;
 
-  /* ============ ГРАДИЕНТ ============ */
+    --lh-tight: 1.25;
+    --lh-base: 1.5;
 
-  --gradient-app: linear-gradient(
-    52deg,
-    var(--blue-700) 0%,
-    var(--green-400) 48%,
-    var(--yellow-400) 100%
-  );
+    --shadow-card: 0 0 124px rgba(0, 0, 0, 0.7);
+    --shadow-focus: 0 0 0 2px rgba(255, 255, 255, 0.18);
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 
-  /* ============ РАЗМЕРЫ ============ */
+    --duration-fast: 0.1s;
+    --duration-base: 0.15s;
+    --duration-slow: 0.3s;
 
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
+    --ease-out: ease-out;
+    --ease-in-out: ease-in-out;
 
-  /* ============ РАДИУСЫ ============ */
-
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-
-  /* ============ ТИПОГРАФИКА ============ */
-
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --fs-sm: 14px;
-  --fs-md: 16px;
-  --fs-lg: 20px;
-  --fs-xl: 28px;
-
-  --lh-tight: 1.25;
-  --lh-base: 1.5;
-
-  /* ============ ТЕНИ ============ */
-
-  --shadow-card: 0 0 124px rgba(0, 0, 0, 0.8);
-  --shadow-focus: 0 0 0 2px rgba(87, 199, 133, 0.2);
-  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-
-  /* ============ АНИМАЦИИ ============ */
-
-  --duration-fast: 0.1s;
-  --duration-base: 0.15s;
-  --duration-slow: 0.3s;
-
-  --ease-out: ease-out;
-  --ease-in-out: ease-in-out;
-
-  --transition-fast: var(--duration-fast) var(--ease-out);
-  --transition-base: var(--duration-base) var(--ease-in-out);
-  --transition-slow: var(--duration-slow) var(--ease-out);
+    --transition-fast: var(--duration-fast) var(--ease-out);
+    --transition-base: var(--duration-base) var(--ease-in-out);
+    --transition-slow: var(--duration-slow) var(--ease-out);
 }
