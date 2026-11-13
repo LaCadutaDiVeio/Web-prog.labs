@@ -23,6 +23,9 @@ function AppHeader() {
 
       <button className="profile-button" type="button">
         Профиль
+        <Link className="auth-option-switch_link" to="/login">
+          Войдите!
+        </Link>
       </button>
     </header>
   )

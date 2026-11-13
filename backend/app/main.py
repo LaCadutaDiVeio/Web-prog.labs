@@ -1,6 +1,8 @@
-def main() -> None:
-    print("скоро тут будет бек")
+from fastapi import FastAPI
+
+app = FastAPI(title="TaskMaster API")
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/api/health")
+def health() -> dict[str, str]:
+    return {"status": "working", "service": "backend"}
